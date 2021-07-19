@@ -6,7 +6,19 @@ solver algorithm
 generator algorithm
 '''
 
-board = [[' ' for _ in range(9)] for _ in range(9)]
+board = [[' ' for i in range(9)] for i in range(9)]
+board = [
+	[ 6 , 2 ,' ', 9 ,' ',' ',' ',' ',' '],
+	[' ',' ', 9 ,' ',' ',' ',' ', 5 , 2 ],
+	[' ',' ',' ', 7 ,' ', 1 , 9 ,' ',' '],
+	[' ',' ',' ', 6 ,' ',' ',' ', 1 ,' '],
+	[ 4 ,' ', 6 ,' ', 1 ,' ',' ', 7 ,' '],
+	[' ',' ',' ',' ', 3 , 2 ,' ',' ',' '],
+	[ 1 , 7 ,' ',' ',' ', 8 ,' ',' ',' '],
+	[ 3 ,' ',' ',' ',' ',' ', 5 ,' ',' '],
+	[' ', 8 ,' ',' ',' ', 6 ,' ',' ', 1 ]]
+
+
 numberInputs = {
 	pygame.K_1:1,
 	pygame.K_2:2,
@@ -19,7 +31,7 @@ numberInputs = {
 	pygame.K_9:9
 	}
 
-def isValid(board:list[list]) -> bool:
+def isValid(board):
 	for num in range(1,10):
 		# lines
 		for line in board:
